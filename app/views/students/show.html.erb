@@ -1,0 +1,27 @@
+<br>
+<br>
+<p> </p>
+<div class= "card rounded-5 shadow">
+    <div class= "card-body">
+<h1>
+Student Details
+</h1>
+
+<p><strong>First_name : </strong><%= @student.first_name%></p>
+<p><strong>Last_name : </strong><%= @student.last_name%></p>
+<p><strong>email : </strong><%= @student.email%></p>
+
+<br>
+
+<%= link_to 'back', students_path , class:"btn btn-primary" %> 
+<%= link_to 'edit', edit_student_path(@student), class:"btn btn-secondary"%> 
+<p></p>
+ <%= button_to 'Delete', @student, method: :delete, data: { turbo_confirm: 'Are you sure?' } , class:"btn btn-danger"%>
+
+
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,47 @@
+
+
+<%= form_with model: @student do |form| %>
+  <% if @student.errors.any? %>
+    <% @student.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  <% end %>
+
+  <div class = "form-group">
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name , class: "form_control form-control-lg" %>
+  </div>
+  <div class = "form-group" >
+    <%= form.label :last_name %><br>
+    <%= form.text_field :last_name  , class: "form_control form-control-lg" %>
+  </div>
+  <div class = "form-group" >
+    <%= form.label :email %><br>
+    <%= form.email_field :email  , class: "form_control form-control-lg"  %>
+  </div>
+   <div class = "form-group" >
+    <%= form.label :date_of_birth %><br>
+    <%= form.date_field :date_of_birth  , class: "form_control form-control-lg" %>
+  </div>
+
+   <div class = "form-group" >
+    <%= form.label :Contact %><br>
+    <%= form.text_field :contact  , class: "form_control form-control-lg"  %>
+  </div>
+
+     <div class = "form-group" >
+    <%= form.label :Local_Address %><br>
+    <%= form.text_field :local_address  , class: "form_control form-control-lg"  %>
+  </div>
+     <div class = "form-group" >
+    <%= form.label :Address %><br>
+    <%= form.text_field :permanent_address  , class: "form_control form-control-lg"  %>
+  </div>
+
+
+<br>
+  
+  <div>
+    <%= form.submit class: "btn btn-info"%>
+  </div>
+<% end %>
